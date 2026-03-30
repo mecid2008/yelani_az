@@ -37,7 +37,33 @@ $wa_link = "https://wa.me/" . $whatsapp_number . "?text=" . urlencode($content[$
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yeləni | <?php echo $content[$lang]['slogan']; ?></title>
+<?php
+$seo = [
+    'az' => [
+        'title' => 'Yeləni — Azərbaycan kəlağayıları | Bakı, Nizami küçəsi',
+        'desc'  => 'İpəkdə zəriflik, naxışda tarix. Bakının mərkəzində, Nizami küçəsində yerləşən Yeləni butikində əl işi olan eksklüziv kəlağayılar.'
+    ],
+    'en' => [
+        'title' => 'Yelani — Exclusive Azerbaijani Kelaghayi | Nizami St, Baku',
+        'desc'  => 'Elegance in silk, history in patterns. Discover handmade silk scarves at the Yelani boutique on Nizami Street, Baku center.'
+    ],
+    'ru' => [
+        'title' => 'Yelani — Азербайджанские келагаи | Баку, улица Низами',
+        'desc'  => 'Изящество в шелке, история в узорах. Эксклюзивные шелковые платки ручной работы в бутике Yelani на улице Низами, Баку.'
+    ]
+];
+
+$page_title = $seo[$lang]['title'] ?? $seo['az']['title'];
+$page_desc  = $seo[$lang]['desc'] ?? $seo['az']['desc'];
+?>
+
+    <title><?php echo $page_title; ?></title>
+    <meta name="description" content="<?php echo $page_desc; ?>">
+
+    <meta property="og:title" content="<?php echo $page_title; ?>">
+    <meta property="og:description" content="<?php echo $page_desc; ?>">
+    <meta property="og:image" content="https://yelani.az/assets/logo.jpeg">
+    <meta property="og:url" content="https://yelani.az">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
