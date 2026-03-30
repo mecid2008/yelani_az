@@ -55,6 +55,13 @@ $seo = [
 
 $page_title = $seo[$lang]['title'] ?? $seo['az']['title'];
 $page_desc  = $seo[$lang]['desc'] ?? $seo['az']['desc'];
+$instagram_url = 'https://www.instagram.com/yeleni_kelagayi/';
+$og_locale_map = [
+    'az' => 'az_AZ',
+    'en' => 'en_US',
+    'ru' => 'ru_RU'
+];
+$og_locale = $og_locale_map[$lang] ?? 'az_AZ';
 ?>
 
     <title><?php echo $page_title; ?></title>
@@ -62,8 +69,25 @@ $page_desc  = $seo[$lang]['desc'] ?? $seo['az']['desc'];
 
     <meta property="og:title" content="<?php echo $page_title; ?>">
     <meta property="og:description" content="<?php echo $page_desc; ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="<?php echo $og_locale; ?>">
     <meta property="og:image" content="https://yelani.az/assets/logo.jpeg">
     <meta property="og:url" content="https://yelani.az">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?php echo $page_title; ?>">
+    <meta name="twitter:description" content="<?php echo $page_desc; ?>">
+    <meta name="twitter:image" content="https://yelani.az/assets/logo.jpeg">
+    <link rel="me" href="<?php echo $instagram_url; ?>">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Yeləni",
+            "url": "https://yelani.az",
+            "sameAs": ["<?php echo $instagram_url; ?>"]
+        }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <style>
