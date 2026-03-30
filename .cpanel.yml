@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/zoomga5/yelani.az/
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp -r assets $DEPLOYPATH
