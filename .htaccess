@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Canonical URL: HTTPS + non-www (yelani.az)
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.yelani\.az$ [NC]
+RewriteRule ^ https://yelani.az%{REQUEST_URI} [L,R=301]
+
+# Redirect direct .php requests to extensionless URL
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ %1 [L,R=301]
+
+# Internally map extensionless URL to existing .php file
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]

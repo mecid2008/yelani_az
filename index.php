@@ -71,13 +71,13 @@ $og_locale = $og_locale_map[$lang] ?? 'az_AZ';
     <meta property="og:description" content="<?php echo $page_desc; ?>">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="<?php echo $og_locale; ?>">
-    <meta property="og:image" content="https://yelani.az/assets/logo.jpeg">
+    <meta property="og:image" content="https://yelani.az/assets/logo.png">
     <meta property="og:url" content="https://yelani.az">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?php echo $page_title; ?>">
     <meta name="twitter:description" content="<?php echo $page_desc; ?>">
-    <meta name="twitter:image" content="https://yelani.az/assets/logo.jpeg">
+    <meta name="twitter:image" content="https://yelani.az/assets/logo.png">
     <link rel="me" href="<?php echo $instagram_url; ?>">
     <script type="application/ld+json">
         {
@@ -205,7 +205,7 @@ $og_locale = $og_locale_map[$lang] ?? 'az_AZ';
             <div class="reveal reveal-1 mb-8">
                 <div class="relative inline-block">
                     <div class="absolute -inset-4 border border-gold/20 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
-                    <img src="assets/logo.jpeg" alt="Yeləni Logo" class="w-48 md:w-64 h-auto drop-shadow-2xl logo-glow">
+                    <img src="assets/logo.png" alt="Yeləni Logo" class="w-48 md:w-64 h-auto drop-shadow-2xl logo-glow">
                 </div>
             </div>
 
