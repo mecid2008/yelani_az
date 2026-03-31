@@ -87,6 +87,18 @@ $og_locale = $og_locale_map[$lang] ?? 'az_AZ';
             "url": "https://yelani.az",
             "sameAs": ["<?php echo $instagram_url; ?>"]
         }
+        <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D2AE6E',
+            dark: '#284653',
+          }
+        }
+      }
+    }
+</script>
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
@@ -205,7 +217,7 @@ $og_locale = $og_locale_map[$lang] ?? 'az_AZ';
             <div class="reveal reveal-1 mb-8">
                 <div class="relative inline-block">
                     <div class="absolute -inset-4 border border-gold/20 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
-                    <img src="assets/logo.png" alt="Yeləni Logo" class="w-48 md:w-64 h-auto drop-shadow-2xl logo-glow">
+                    <img src="assets/logo.png?v=1.1" alt="Yeləni Logo" class="w-48 md:w-64 h-auto drop-shadow-2xl logo-glow">
                 </div>
             </div>
 
