@@ -1,15 +1,23 @@
 RewriteEngine On
 
-# Canonical URL: HTTPS + non-www (yelani.az)
-RewriteCond %{HTTPS} !=on [OR]
+# Canonical HTTPS + non-www — только на продакшене (yelani.az)
 RewriteCond %{HTTP_HOST} ^www\.yelani\.az$ [NC]
 RewriteRule ^ https://yelani.az%{REQUEST_URI} [L,R=301]
 
-# Redirect direct .php requests to extensionless URL
-RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
-RewriteRule ^ %1 [L,R=301]
+RewriteCond %{HTTP_HOST} ^yelani\.az$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://yelani.az%{REQUEST_URI} [L,R=301]
 
-# Internally map extensionless URL to existing .php file
+# Ниже: «чистые» URL без .php — ТОЛЬКО на боевом домене.
+# В подкаталоге localhost (/yelani_az/) эти правила ломают пути → 404.
+
+# Редирект: page.php → /page (с сохранением query string)
+RewriteCond %{HTTP_HOST} ^(www\.)?yelani\.az$ [NC]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ https://yelani.az/%1 [L,R=301,QSA]
+
+# Внутренняя подстановка: /page → page.php
+RewriteCond %{HTTP_HOST} ^(www\.)?yelani\.az$ [NC]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}.php -f
