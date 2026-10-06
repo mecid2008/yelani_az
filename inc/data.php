@@ -14,7 +14,7 @@ $content = [
         'collection_title' => 'Kolleksiya',
         'label_product' => 'Məhsul',
         'label_inspiration' => 'İlham',
-        'button' => 'WhatsApp-da yazın',
+        'button' => 'Bizimlə əlaqə',
         'wa_msg' => 'Salam! Yeləni kəlağayıları ilə maraqlanıram. Yeniliklər barədə mənə məlumat verin.'
     ],
     'en' => [
@@ -25,7 +25,7 @@ $content = [
         'collection_title' => 'Collection',
         'label_product' => 'Product',
         'label_inspiration' => 'Inspiration',
-        'button' => 'Contact via WhatsApp',
+        'button' => 'Contact us',
         'wa_msg' => 'Hello! I am interested in Yeləni kelaghayis. Please keep me updated.'
     ],
     'ru' => [
@@ -36,7 +36,7 @@ $content = [
         'collection_title' => 'Коллекция',
         'label_product' => 'Изделие',
         'label_inspiration' => 'Вдохновение',
-        'button' => 'Написать в WhatsApp',
+        'button' => 'Связаться с нами',
         'wa_msg' => 'Здравствуйте! Меня интересуют келагаи Yeləni. Сообщите мне об открытии.'
     ]
 ];

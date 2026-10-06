@@ -11,7 +11,12 @@ $og_url = 'https://yelani.az/';
 $is_splash_page = true;
 $lang_switch_script = 'index.php';
 
-$collection_href = 'collection.php?' . http_build_query(['lang' => $lang]);
+$contact_href = 'https://wa.me/' . $whatsapp_number . '?' . http_build_query(
+    ['text' => $content[$lang]['wa_msg']],
+    '',
+    '&',
+    PHP_QUERY_RFC3986
+);
 
 require __DIR__ . '/inc/header.php';
 ?>
@@ -38,10 +43,10 @@ require __DIR__ . '/inc/header.php';
             </div>
 
             <div class="reveal reveal-3">
-                <a href="<?php echo htmlspecialchars($collection_href, ENT_QUOTES, 'UTF-8'); ?>"
+                <a href="<?php echo htmlspecialchars($contact_href, ENT_QUOTES, 'UTF-8'); ?>"
                    class="group relative inline-flex items-center gap-4 px-12 py-5 border border-gold/30 hover:border-gold transition-all duration-700">
                     <span class="text-gold text-[10px] tracking-[0.4em] uppercase group-hover:text-white transition-colors relative z-10">
-                        <?php echo htmlspecialchars($content[$lang]['discover'], ENT_QUOTES, 'UTF-8'); ?>
+                        <?php echo htmlspecialchars($content[$lang]['button'], ENT_QUOTES, 'UTF-8'); ?>
                     </span>
                     <div class="absolute inset-0 bg-gold origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-500"></div>
                 </a>
