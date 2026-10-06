@@ -138,7 +138,7 @@ $og_url_page = $og_url ?? 'https://yelani.az/';
 </head>
 <body class="min-h-screen overflow-x-hidden">
     <div class="fixed inset-0 z-0">
-        <img src="assets/bg.png" alt="" class="w-full h-full object-cover animate-silk opacity-20">
+        <img src="assets/bg.webp" alt="" width="1376" height="768" fetchpriority="high" class="w-full h-full object-cover animate-silk opacity-20">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#284653]/80 to-[#284653]"></div>
     </div>
 
