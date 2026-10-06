@@ -3,4 +3,7 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/zoomga5/yelani.az/
     - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp collection.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp -r inc $DEPLOYPATH
     - /bin/cp -r assets $DEPLOYPATH
